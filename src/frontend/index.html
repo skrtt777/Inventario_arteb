@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventário QR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Bem-vindo ao Inventário QR</h1>
+
+        <div id="menu">
+            <button onclick="verListaTabelas()">Ver Lista</button>
+            <button onclick="importarItens()">Importar Itens</button>
+        </div>
+
+        <div id="tabelas" class="escondido">
+            <h2>Selecione uma tabela:</h2>
+            <select id="select-tabela" onchange="verDadosDaTabela(this.value)">
+                <option value="">-- Escolha uma tabela --</option>
+            </select>
+        </div>
+
+        <div id="dados-tabela" class="escondido">
+            <h2>Dados da Tabela</h2>
+            <table id="tabela-dados"></table>
+        </div>
+    </div>
+
+    <script src="api_config.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
